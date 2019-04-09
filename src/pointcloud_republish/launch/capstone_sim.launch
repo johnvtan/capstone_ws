@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <node ns="pointcloud_repub" name="pointcloud_repub" pkg="pointcloud_republish" type="pointcloud_republish_node" output="screen">
+      <param name="input_topic" value="/camera/depth/points"/>
+      <param name="output_topic" value="/camera/depth/points_downsampled"/>
+  </node>
+
+</launch>

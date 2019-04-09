@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <include file="$(find pointcloud_republish)/launch/capstone.launch"/>
+    <include file="$(find voxblox_ros)/launch/capstone.launch"/>
+    <include file="$(find landing_site_detection)/launch/capstone.launch"/>
+</launch>

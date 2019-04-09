@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <node ns="pointcloud_repub" name="pointcloud_repub" pkg="pointcloud_republish" type="pointcloud_republish_node" output="screen">
+      <param name="input_topic" value="/camera/depth/points"/>
+      <param name="output_topic" value="/camera/depth/points_downsampled"/>
+  </node>
+
+  <node name="tf_sim" pkg="tf_scripts" type="tf_pub_sim.py" output="screen"/>
+
+  <node name="navigation" pkg="nav_scripts" type="capstone_sim.py" output="screen"/> 
+</launch>

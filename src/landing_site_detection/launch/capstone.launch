@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <node name="LSD" pkg="landing_site_detection" type="landing_site_detection" output="screen">
+    <param name="input_topic" value="/voxblox_node/surface_pointcloud" />
+    <param name="output_topic" value="landing_site"/>
+    <param name="publish_pointclouds" value="true"/>
+  </node>
+
+</launch>

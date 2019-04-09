@@ -1,0 +1,11 @@
+# Simplenav_navigator Waypoint Navigation Goal Definition
+# Inputs
+geometry_msgs/PoseStamped goalPose
+bool activeHovering
+---
+# Results
+geometry_msgs/PoseStamped refPose
+---
+# Feedback
+string status
+float32 l2NormGoal

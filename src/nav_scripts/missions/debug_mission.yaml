@@ -1,0 +1,25 @@
+mission:
+  - type: takeoff
+
+  - type: waypoint
+    frame: GNSS_ENU_LLH
+    wp: [ 42.4779455237, -71.193544351, 11.0, 0.0]
+    captureRadius: 1
+    depends: false
+    timeout: 20
+
+  - type: land
+    method: apriltag
+    depends: true
+    timeOut: 1
+
+  - type: aligncharger
+
+  - type: takeoff
+
+# Home
+# Defined home command (generally move to a specific waypoint, possibly land)
+home:
+  - type: waypoint
+    wp: [42.339340, -71.083474, 8.0, 30.0]
+

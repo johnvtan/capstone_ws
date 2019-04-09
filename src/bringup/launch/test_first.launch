@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <node name="pose_pub" pkg="tf_scripts" type="tf_pub.py" output="screen"/>
+    <!--node name="pose_pub" pkg="tf_scripts" type="odom_to_pose.py" output="screen"/-->
+    <node ns="guidance" name="stereo_image_proc" pkg="stereo_image_proc" type="stereo_image_proc" output="screen"/>
+    <include file="$(find orb_slam2_ros)/ros/launch/capstone.launch"/>
+</launch>
